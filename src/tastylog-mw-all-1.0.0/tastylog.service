@@ -1,0 +1,14 @@
+[Unit]
+Description=tastylog web application
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/params
+WorkingDirectory=/opt/tastylog
+ExecStart=/usr/bin/npm start
+ExecStop=/bin/kill -s QUIT $MAINPID
+Restart=on-failure
+
+[Install]
+RequiredBy=network.target
+WantedBy=multi-user.target

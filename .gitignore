@@ -32,3 +32,8 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# private key
+src/tastylog-dev-keypair
+.DS_Store
+src/tastylog-dev-keypair.pub
